@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Başvuru</title>
+  </head>
+  <body>
+	  <div class="container">
+    	<h1 style="color:black">BAYİLİK ÖN BAŞVURU FORMU</h1>
+    	<form class="col-5" th:action="@{/registerUser}" th:object="${user}" method="post" >
+				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>İSİM SOYİSİM:</b></label>
+  					<input type="text" th:field="*{isim}" class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>TC KİMLİK:</b></label>
+  					<input type="text" th:field="*{tc}" class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>ADRES:</b></label>
+  					<input type="text" th:field="*{adres}"  class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>TELEFON:</b></label>
+  					<input type="text" th:field="*{telefon_no}" class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>E-POSTA:</b></label>
+  					<input type="text" th:field="*{e_posta}"  class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>DOĞUM TARİHİ:</b></label>
+  					<input type="text" th:field="*{dogum_tarihi}"  class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>PERAKENDE TİCARETİ İLE UĞRAŞTINIZ MI?</b></label>
+  					<div class="form-check form-check-inline">
+  						<input class="form-check-input" type="radio" name="ticaret_durumu" id="inlineRadio1" value="Evet">
+  						<label class="form-check-label" for="inlineRadio1">EVET</label>
+					</div>
+					<div class="form-check form-check-inline">
+  						<input class="form-check-input" type="radio" name="ticaret_durumu" id="inlineRadio2" value="Hayır">
+  						<label class="form-check-label" for="inlineRadio2">HAYIR</label>
+					</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>LOKUMCU BABA'YI TERCİH ETMENİZİN SEBEBİ NEDİR?</b></label>
+  					<input type="text" th:field="*{tercih_sebebi}"  class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>HANGİ İL/İLÇE/SEMT İÇİN LOKUMCU BABA İŞLETMECİLİĞİ DÜŞÜNÜYORSUNUZ?</b></label>
+  					<input type="text" th:field="*{konum}" class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>YATIRIM MİKTARINIZ NEDİR?</b></label>
+  					<input type="text" th:field="*{yatirim_miktari}" class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label"><b>EKLEMEK İSTEDİKLERİNİZ:</b></label>
+  					<input type="text" th:field="*{ekler}"  class="form-control" id="exampleFormControlInput1" placeholder=" ">
+  				</div>
+  				<button type="submit" class="btn btn-success">BAŞVUR</button>
+  				
+ </form>
+  </body>
+</html>
